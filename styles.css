@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #333; /* Default text color */
+    background: #f0f0f0; /* Default background color */
+    font-size: 20px;
+    transition: background 0.6s ease, color 0.6s ease;
+}
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+        background: #222; /* Dark background */
+        color: #f0f0f0; /* Light text */
+    }
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333; /* Dark gray */
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    align-items: center;
+    padding: 0 20px;
+}
+
+    #navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-grow: 1; /* Allow the ul to grow and take available space */
+        justify-content: center; /* Center the links within the ul */
+    }
+
+        #navbar ul li {
+            margin: 0 15px;
+        }
+
+            #navbar ul li a {
+                color: #fff; /* White text */
+                text-decoration: none;
+                padding: 10px 20px;
+                display: block;
+            }
+
+                #navbar ul li a:hover {
+                    background: #555; /* Lighter gray */
+                }
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff; /* White text */
+    transition: transform 0.6s ease;
+    margin-left: auto; /* Push the button to the right */
+}
+
+    #theme-toggle:hover {
+        transform: scale(1.2); /* Slightly enlarge on hover */
+    }
+
+/* Sections */
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home {
+    background: #dddddd; /* Light gray */
+}
+
+#portfolio {
+    background: #cbcbcb; /* Medium light gray */
+}
+
+#about {
+    background: #a6a6a6; /* Medium gray */
+}
+
+#monitoria {
+    background: #818181; /* Medium dark gray */
+}
+
+/* Dark Mode Section Backgrounds */
+body.dark-mode #home {
+    background: #4d4d4d; /* Dark gray */
+}
+
+body.dark-mode #portfolio {
+    background: #3c3c3c; /* Darker gray */
+}
+
+body.dark-mode #about {
+    background: #1e1e1e; /* Even darker gray */
+}
+
+body.dark-mode #monitoria {
+    background: #111111; /* light black */
+}
+
+
+/* Portfolio Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.6s ease;
+    }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333; /* Dark gray */
+    color: #fff; /* White text */
+}
+
+body.dark-mode footer {
+    background: #1e1e1e; /* Even darker gray */
+}

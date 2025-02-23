@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Início</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#monitoria">Monitoria</a></li>
+      <li>
+        <button id="theme-toggle">🌙</button> <!-- Default: Moon emoji -->
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="container">
+      <h1>Bem-vindo ao Meu Portfólio</h1>
+      <p>Eu sou um aluno e desenvolvedor amador.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>Portfólio</h2>
+      <div class="gallery">
+        <img src="image1.png" alt="Projeto 1">
+        <img src="image2.png" alt="Projeto 2">
+        <img src="image3.png" alt="Projeto 3">
+        <img src="image4.png" alt="Projeto 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Sobre Mim e Meus Projetos</h2>
+      <p>Eu sou um aluno e programador amador, com foco em criar aplica&ccedil;&otilde;es bonitas, &uacute;teis e acess&iacute;veis, com uma paixão pela progama&ccedil;&atilde;o. Adoro trabalhar em projetos que me desafiam a aprender coisas novas, mas principalmente aqueles que realmente acabam sendo &uacute;teis e aprofudam meus conhecimentos na &aacute;rea.</p>
+      <p>Já trabalhei em diversos projetos, alguns deles são mostrados na sessão de portfolio. Já trabalhei em projetos como uma aplição em python capaz de fazer o download de videos do youtube com uma interface gráfica amigavél, um progama que organiza pastas bagunçadas em instantes, dentre outros projetos como jogos, assistentes virtuais e esse website que você está vendo agora!</p>
+    </div>
+  </section>
+
+
+     <!-- Monitoria Section -->
+ <section id="monitoria" class="section">
+   <div class="container">
+     <h3>Por que devo me tornar monitor de Sistemas Operacionais?</h3>
+     <p>Possuo um sólido conhecimento na matéria de Sistemas Operacionais e experiência em programação em diversas linguagens, incluindo HTML, Portugol, Python e Scratch. Essa base me permite compreender tanto os conceitos teóricos quanto as aplicações práticas dos sistemas operacionais no desenvolvimento de software.
+Além do conhecimento técnico, tenho facilidade em explicar conteúdos e auxiliar colegas, o que contribuiria para o aprendizado dos estudantes da automação. Como monitor, poderei reforçar meu próprio aprendizado enquanto compartilho meus conhecimentos, ajudando a tornar a disciplina mais acessível e interessante para os alunos.
+Acredito que minha experiência e disposição para ensinar fazem de mim um candidato ideal para a monitoria, contribuindo para um ambiente de aprendizado colaborativo e produtivo</p>
+   </div>
+ </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Meu Portf&oacute;lio. H&eacute;rcules Ferreira - AUT1d2.</p>
+  </footer>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Dark/Light Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        themeToggle.textContent = '☀️'; // Sun emoji for light mode
+      } else {
+        themeToggle.textContent = '🌙'; // Moon emoji for dark mode
+      }
+    });
+  </script>
+</body>
+</html>
