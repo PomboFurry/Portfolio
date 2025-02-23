@@ -95,15 +95,17 @@ body {
 }
 
 #portfolio {
-    background: #cbcbcb; /* Medium light gray */
+    background: #C6C6C6; /* Medium light gray */
 }
 
 #about {
-    background: #a6a6a6; /* Medium gray */
+    background: #AFAFAF; /* Medium gray */
 }
 
+/* cor extra: ##818181*/
+
 #monitoria {
-    background: #818181; /* Medium dark gray */
+    background: #989898; /* Medium dark gray */
 }
 
 /* Dark Mode Section Backgrounds */
@@ -112,15 +114,17 @@ body.dark-mode #home {
 }
 
 body.dark-mode #portfolio {
-    background: #3c3c3c; /* Darker gray */
+    background: #404040; /* Darker gray */
 }
 
 body.dark-mode #about {
-    background: #1e1e1e; /* Even darker gray */
+    background: #333333; /* Even darker gray */
 }
 
+/* cor extra: #181818*/
+
 body.dark-mode #monitoria {
-    background: #111111; /* light black */
+    background: #252525; /* light black */
 }
 
 /* Portfolio Gallery */
