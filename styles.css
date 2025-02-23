@@ -7,7 +7,7 @@ body {
     scroll-behavior: smooth;
     color: #333; /* Default text color */
     background: #f0f0f0; /* Default background color */
-    font-size: 20px;
+    font-size: 18px; /* Reduced font size for mobile */
     transition: background 0.6s ease, color 0.6s ease;
 }
 
@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center; /* Center the navigation links */
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px; /* Reduced padding for mobile */
 }
 
     #navbar ul {
@@ -45,17 +45,19 @@ body {
         align-items: center;
         flex-grow: 1; /* Allow the ul to grow and take available space */
         justify-content: center; /* Center the links within the ul */
+        flex-wrap: wrap; /* Allow wrapping of navigation items */
     }
 
         #navbar ul li {
-            margin: 0 15px;
+            margin: 5px 10px; /* Reduced margin for mobile */
         }
 
             #navbar ul li a {
                 color: #fff; /* White text */
                 text-decoration: none;
-                padding: 10px 20px;
+                padding: 5px 10px; /* Reduced padding for mobile */
                 display: block;
+                font-size: 14px; /* Reduced font size for mobile */
             }
 
                 #navbar ul li a:hover {
@@ -66,9 +68,9 @@ body {
 #theme-toggle {
     background: transparent;
     border: none;
-    font-size: 24px;
+    font-size: 20px; /* Reduced font size for mobile */
     cursor: pointer;
-    padding: 10px;
+    padding: 5px; /* Reduced padding for mobile */
     color: #fff; /* White text */
     transition: transform 0.6s ease;
     margin-left: auto; /* Push the button to the right */
@@ -80,11 +82,12 @@ body {
 
 /* Sections */
 .section {
-    height: 100vh;
+    min-height: 100vh; /* Use min-height instead of height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 20px; /* Added padding for better spacing on mobile */
 }
 
 #home {
@@ -120,12 +123,11 @@ body.dark-mode #monitoria {
     background: #111111; /* light black */
 }
 
-
 /* Portfolio Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for mobile */
+    gap: 10px; /* Reduced gap for mobile */
 }
 
     .gallery img {
@@ -142,9 +144,10 @@ body.dark-mode #monitoria {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px; /* Reduced padding for mobile */
     background: #333; /* Dark gray */
     color: #fff; /* White text */
+    font-size: 14px; /* Reduced font size for mobile */
 }
 
 body.dark-mode footer {
