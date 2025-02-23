@@ -161,6 +161,15 @@ body.dark-mode footer {
     }
 
     /* Navigation adjustments for mobile */
+    #navbar ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    #navbar ul li {
+        margin: 5px 0; /* Smaller margin for mobile */
+    }
+
     #navbar ul li a {
         font-size: 14px; /* Smaller font size for mobile */
         padding: 8px 12px; /* Smaller padding for mobile */
@@ -169,6 +178,13 @@ body.dark-mode footer {
     #theme-toggle {
         font-size: 20px; /* Smaller toggle button for mobile */
         padding: 8px; /* Smaller padding for mobile */
+    }
+
+    /* Sections adjustments for mobile */
+    .section {
+        padding: 10px; /* Smaller padding for mobile */
+        min-height: auto; /* Allow sections to shrink on mobile */
+        height: auto; /* Allow sections to grow with content */
     }
 
     /* Gallery adjustments for mobile */
@@ -196,5 +212,11 @@ body.dark-mode footer {
 
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted for very small screens */
+    }
+
+    /* Ensure text doesn't overflow in sections */
+    .section h1, .section h2, .section h3, .section p {
+        word-wrap: break-word; /* Prevent text overflow */
+        overflow-wrap: break-word; /* Ensure long words break */
     }
 }
