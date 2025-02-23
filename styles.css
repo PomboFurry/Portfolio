@@ -7,15 +7,15 @@ body {
     scroll-behavior: smooth;
     color: #333; /* Default text color */
     background: #f0f0f0; /* Default background color */
-    font-size: 18px; /* Reduced font size for mobile */
+    font-size: 20px; /* Default font size for PC */
     transition: background 0.6s ease, color 0.6s ease;
 }
 
-    /* Dark Mode Styles */
-    body.dark-mode {
-        background: #222; /* Dark background */
-        color: #f0f0f0; /* Light text */
-    }
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #222; /* Dark background */
+    color: #f0f0f0; /* Light text */
+}
 
 .container {
     width: 90%;
@@ -34,60 +34,60 @@ body {
     display: flex;
     justify-content: center; /* Center the navigation links */
     align-items: center;
-    padding: 10px 20px; /* Reduced padding for mobile */
+    padding: 10px 20px;
 }
 
-    #navbar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        flex-grow: 1; /* Allow the ul to grow and take available space */
-        justify-content: center; /* Center the links within the ul */
-        flex-wrap: wrap; /* Allow wrapping of navigation items */
-    }
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow the ul to grow and take available space */
+    justify-content: center; /* Center the links within the ul */
+    flex-wrap: wrap; /* Allow wrapping of navigation items */
+}
 
-        #navbar ul li {
-            margin: 5px 10px; /* Reduced margin for mobile */
-        }
+#navbar ul li {
+    margin: 0 10px; /* Adjusted margin for better spacing */
+}
 
-            #navbar ul li a {
-                color: #fff; /* White text */
-                text-decoration: none;
-                padding: 5px 10px; /* Reduced padding for mobile */
-                display: block;
-                font-size: 14px; /* Reduced font size for mobile */
-            }
+#navbar ul li a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 10px 15px; /* Adjusted padding for better spacing */
+    display: block;
+    font-size: 18px; /* Default font size for PC */
+}
 
-                #navbar ul li a:hover {
-                    background: #555; /* Lighter gray */
-                }
+#navbar ul li a:hover {
+    background: #555; /* Lighter gray */
+}
 
 /* Theme Toggle Button */
 #theme-toggle {
     background: transparent;
     border: none;
-    font-size: 20px; /* Reduced font size for mobile */
+    font-size: 24px; /* Default size for PC */
     cursor: pointer;
-    padding: 5px; /* Reduced padding for mobile */
+    padding: 10px;
     color: #fff; /* White text */
     transition: transform 0.6s ease;
     margin-left: auto; /* Push the button to the right */
 }
 
-    #theme-toggle:hover {
-        transform: scale(1.2); /* Slightly enlarge on hover */
-    }
+#theme-toggle:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
 
 /* Sections */
 .section {
-    min-height: 100vh; /* Use min-height instead of height */
+    min-height: 100vh; /* Use min-height to ensure sections don't overflow */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px; /* Added padding for better spacing on mobile */
+    padding: 20px; /* Added padding for better spacing */
 }
 
 #home {
@@ -126,30 +126,75 @@ body.dark-mode #monitoria {
 /* Portfolio Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for mobile */
-    gap: 10px; /* Reduced gap for mobile */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted for PC */
+    gap: 15px;
 }
 
-    .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.6s ease;
-    }
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+}
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+.gallery img:hover {
+    transform: scale(1.05);
+}
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px; /* Reduced padding for mobile */
+    padding: 20px;
     background: #333; /* Dark gray */
     color: #fff; /* White text */
-    font-size: 14px; /* Reduced font size for mobile */
 }
 
 body.dark-mode footer {
     background: #1e1e1e; /* Even darker gray */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    /* Adjust font sizes for mobile */
+    body {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    /* Navigation adjustments for mobile */
+    #navbar ul li a {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px 12px; /* Smaller padding for mobile */
+    }
+
+    #theme-toggle {
+        font-size: 20px; /* Smaller toggle button for mobile */
+        padding: 8px; /* Smaller padding for mobile */
+    }
+
+    /* Gallery adjustments for mobile */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for mobile */
+        gap: 10px; /* Smaller gap for mobile */
+    }
+
+    /* Footer adjustments for mobile */
+    footer {
+        padding: 15px; /* Smaller padding for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    #navbar ul li {
+        margin: 5px; /* Smaller margin for very small screens */
+    }
+
+    #navbar ul li a {
+        padding: 6px 10px; /* Smaller padding for very small screens */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjusted for very small screens */
+    }
 }
